@@ -60,7 +60,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Interface1.cs" />
     <Compile Include="Settings.cs" />
+    <Page Include="Dictionary.en-US.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary.ru-RU.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -73,15 +82,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-<<<<<<< HEAD
-    <Page Include="Resources\Dictionary.en-US.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Resources\Dictionary.ru-RU.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-=======
->>>>>>> 1efd22a59c9bcb11ef7fd17096784d8f7e026b6a
   </ItemGroup>
   <ItemGroup>
     <Compile Include="OverlayWindow.cs" />
@@ -93,6 +93,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include=".editorconfig" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -116,11 +117,8 @@
   <ItemGroup>
     <Resource Include="Iconka.ico" />
   </ItemGroup>
-<<<<<<< HEAD
   <ItemGroup>
     <Resource Include="pubg-icon.png" />
   </ItemGroup>
-=======
->>>>>>> 1efd22a59c9bcb11ef7fd17096784d8f7e026b6a
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

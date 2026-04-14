@@ -1,4 +1,4 @@
-# PUBG Distance Calculator
+# ORESHNIK — PUBG Distance Calculator
 
 How it works
 - The app provides a screen overlay to mark two points and measure the pixel distance between them.

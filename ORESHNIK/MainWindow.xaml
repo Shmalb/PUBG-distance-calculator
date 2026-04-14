@@ -14,171 +14,87 @@
         MouseLeftButtonDown="Window_MouseLeftButtonDown">
     <Border Background="#E0000000" CornerRadius="10" BorderBrush="#FFFF6B35" BorderThickness="2">
         <Grid Margin="10">
-<<<<<<< HEAD
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="217*"/>
-                <ColumnDefinition Width="159*"/>
-            </Grid.ColumnDefinitions>
-=======
->>>>>>> 1efd22a59c9bcb11ef7fd17096784d8f7e026b6a
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
-<<<<<<< HEAD
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
             <!-- Заголовок с кнопками -->
-            <Grid Grid.Row="0" Grid.ColumnSpan="2">
-=======
-                <RowDefinition Height="Auto"/>              
-            </Grid.RowDefinitions>
-
-            <!-- Заголовок с кнопками -->
             <Grid Grid.Row="0">
->>>>>>> 1efd22a59c9bcb11ef7fd17096784d8f7e026b6a
                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
 
-<<<<<<< HEAD
-                <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
-                    <Image Source="pubg-icon.png" Width="20" Height="20" Margin="0,0,8,0"/>
-                    <TextBlock Text="PUBG Distance Calculator" 
-                               FontSize="16" FontWeight="Bold" 
-                               Foreground="#FFFF6B35" VerticalAlignment="Center"/>
-                </StackPanel>
+                <Image Grid.Column="0" Source="pubg-icon.png" 
+                       Width="24" Height="24" Margin="0,0,8,0"
+                       VerticalAlignment="Center"/>
 
-                <Button Grid.Column="1" Content="─" Width="25" Height="25" Margin="5,0"
-                        Background="#FF666666" Foreground="White" 
-                        BorderThickness="0" Cursor="Hand" FontSize="14"
-                        Click="BtnMinimize_Click" ToolTip="{DynamicResource Minimize}"/>
-=======
-                <TextBlock Grid.Column="0" Text="🎯 PUBG Distance Calculator" 
+                <TextBlock Grid.Column="1" Text="PUBG Distance Calculator" 
                            FontSize="16" FontWeight="Bold" 
-                           Foreground="#FFFF6B35" VerticalAlignment="Center"/>
-                
-                <Button Grid.Column="1" Content="─" Width="25" Height="25" Margin="5,0"
+                           Foreground="#FFFF6B35" VerticalAlignment="Top"/>
+
+                <Button Grid.Column="2" Content="─" Width="25" Height="25" Margin="5,0"
                         Background="#FF666666" Foreground="White" 
                         BorderThickness="0" Cursor="Hand" FontSize="14"
                         Click="BtnMinimize_Click" ToolTip="Свернуть"/>
->>>>>>> 1efd22a59c9bcb11ef7fd17096784d8f7e026b6a
 
-                <Button Grid.Column="2" Content="✕" Width="25" Height="25"
+                <Button Grid.Column="3" Content="✕" Width="25" Height="25"
                         Background="#FFCC0000" Foreground="White" 
                         BorderThickness="0" Cursor="Hand" FontSize="14"
-<<<<<<< HEAD
-                        Click="BtnClose_Click" ToolTip="{DynamicResource Close}"/>
-            </Grid>
-
-            <!-- Калибровка -->
-            <Border Grid.Row="1" Background="#FF252525" CornerRadius="5" Padding="8" Margin="0,10,0,36" Grid.ColumnSpan="2" Grid.RowSpan="2">
-                <StackPanel>
-                    <Grid Margin="0,0,0,5">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="85"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="Auto"/>
-                        </Grid.ColumnDefinitions>
-
-                        <TextBlock Grid.Column="0" Text="{DynamicResource ManualInput}" 
-                                   Foreground="White" FontSize="11" FontWeight="Bold" 
-                                   VerticalAlignment="Center"/>
-
-                        <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
-
-                            <TextBox x:Name="txtCalibrationPx" 
-                                     Width="129" Height="26"
-=======
                         Click="BtnClose_Click" ToolTip="Закрыть"/>
             </Grid>
 
             <!-- Калибровка -->
             <Border Grid.Row="1" Background="#FF252525" CornerRadius="5" Padding="8" Margin="0,10,0,0">
                 <StackPanel>
-                    <TextBlock Text="Калибровка (100м):" 
-                               Foreground="White" FontSize="11" FontWeight="Bold" Margin="0,0,0,5"/>
-
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="70"/>
                             <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="70"/>
                         </Grid.ColumnDefinitions>
 
-                        <StackPanel Grid.Column="0" Orientation="Horizontal">
-                            <TextBox x:Name="txtCalibrationPx" 
-                                     Width="80" Height="26"
->>>>>>> 1efd22a59c9bcb11ef7fd17096784d8f7e026b6a
-                                     Background="#FF1A1A1A" Foreground="White"
-                                     BorderBrush="#FF404040" BorderThickness="1"
-                                     VerticalContentAlignment="Center"
-                                     Padding="5,0"
-                                     FontSize="12"
-<<<<<<< HEAD
-                                     Text="0" TextChanged="txtCalibrationPx_TextChanged"/>
+                        <TextBlock Grid.Column="0" Text="Ручной ввод:" 
+                                   Foreground="White" FontSize="11" FontWeight="Bold"
+                                   VerticalAlignment="Center" Margin="0,0,5,0"/>
 
-                            <TextBlock Text="{DynamicResource PxText}" 
-                                       Foreground="#FF888888" FontSize="13"
-                                       VerticalAlignment="Center" Margin="5,0,0,0" Width="62"/>
-                        </StackPanel>
+                        <TextBox Grid.Column="1" x:Name="txtCalibrationPx" 
+                                 Height="26"
+                                 Background="#FF1A1A1A" Foreground="White"
+                                 BorderBrush="#FF404040" BorderThickness="1"
+                                 VerticalContentAlignment="Center"
+                                 Padding="5,0"
+                                 FontSize="12"
+                                 Text="0" Grid.ColumnSpan="3" Margin="4,1,-7,-1"/>
 
-                        <Button Grid.Column="2" x:Name="btnApplyCalibration" 
-                                Content="{DynamicResource Apply}" 
-                                Width="70" Height="24" Margin="5,0,0,0"
-                                Background="#FF0078D7" Foreground="White" 
-                                BorderThickness="0" Cursor="Hand" FontSize="9"
-                                Click="BtnApplyCalibration_Click"/>
-                    </Grid>
+                        <TextBlock Grid.Column="3" Text="px = 100м" 
+                                   Foreground="#FF888888" FontSize="11"
+                                   VerticalAlignment="Top" Margin="82,4,-63,0"/>
 
-                    <TextBlock x:Name="txtCalibrationStatus" 
-                               Text="{DynamicResource CalibrationNotDone}" 
-=======
-                                     Text="0"/>
-                            <TextBlock Text="px = 100м" 
-                                       Foreground="#FF888888" FontSize="11"
-                                       VerticalAlignment="Center" Margin="5,0,0,0"/>
-                        </StackPanel>
-
-                        <Button Grid.Column="1" x:Name="btnApplyCalibration" 
+                        <Button Grid.Column="3" x:Name="btnApplyCalibration" 
                                 Content="Применить" 
-                                Width="80" Height="26" Margin="5,0"
-                                Background="#FF00AA00" Foreground="White" 
-                                BorderThickness="0" Cursor="Hand" FontSize="10"
-                                Click="BtnApplyCalibration_Click"/>
-
-                        <Button Grid.Column="2" x:Name="btnCalibration" 
-                                Content="Ручная калибровка" 
-                                Width="110" Height="26"
+                                Height="24" Margin="148,1,-143,1"
                                 Background="#FF0078D7" Foreground="White" 
                                 BorderThickness="0" Cursor="Hand" FontSize="9"
-                                Click="BtnCalibration_Click"/>
+                                Click="BtnApplyCalibration_Click"/>
                     </Grid>
 
                     <TextBlock x:Name="txtCalibrationStatus" 
                                Text="❌ Калибровка не выполнена" 
->>>>>>> 1efd22a59c9bcb11ef7fd17096784d8f7e026b6a
                                Foreground="#FFFF4444" FontSize="10" 
                                Margin="0,5,0,0"/>
                 </StackPanel>
             </Border>
 
             <!-- Кнопка очистки -->
-<<<<<<< HEAD
-            <Button Grid.Row="2" x:Name="btnClear" Content="{DynamicResource ClearLines}" 
-                    Height="28" Margin="0,8,0,79"
-                    Background="#FF666666" Foreground="White" 
-                    BorderThickness="0" Cursor="Hand" FontSize="11"
-                    Click="BtnClear_Click" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
-
-            <!-- Результат -->
-            <Border Grid.Row="3" Background="#FF1A1A1A" CornerRadius="5" Padding="8" Margin="0,8,0,13" Grid.ColumnSpan="2">
-=======
             <Button Grid.Row="2" x:Name="btnClear" Content="🗑 Очистить линии" 
                     Height="28" Margin="0,8,0,0"
                     Background="#FF666666" Foreground="White" 
@@ -187,7 +103,6 @@
 
             <!-- Результат -->
             <Border Grid.Row="3" Background="#FF1A1A1A" CornerRadius="5" Padding="8" Margin="0,8,0,0">
->>>>>>> 1efd22a59c9bcb11ef7fd17096784d8f7e026b6a
                 <StackPanel>
                     <TextBlock x:Name="txtResult" 
                                Text="Расстояние: --- м" 
@@ -195,11 +110,7 @@
                                Foreground="#FF00FF00"
                                HorizontalAlignment="Center"/>
                     <TextBlock x:Name="txtInstruction" 
-<<<<<<< HEAD
-                               Text="Введите пиксели или используйте горячую клавишу калибровки" 
-=======
                                Text="Введите пиксели или нажмите 'Ручная калибровка'" 
->>>>>>> 1efd22a59c9bcb11ef7fd17096784d8f7e026b6a
                                Foreground="#FFFFCC00" FontSize="10" 
                                TextWrapping="Wrap" Margin="0,5,0,0"
                                HorizontalAlignment="Center" TextAlignment="Center"/>
@@ -207,101 +118,6 @@
             </Border>
 
             <!-- Настройки горячих клавиш -->
-<<<<<<< HEAD
-            <Border Grid.Row="3" Background="#FF1E1E1E" CornerRadius="5" Padding="8" Margin="0,74,0,13" Grid.ColumnSpan="2" Grid.RowSpan="2">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-                    <StackPanel Grid.Row="0">
-                        <TextBlock Text="{DynamicResource HotkeysTitle}" 
-                                   Foreground="#FFFF6B35" FontSize="11" FontWeight="Bold" Margin="0,0,0,5"/>
-
-                        <Grid Margin="0,5,0,0">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="85"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="Auto"/>
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="Auto"/>
-                            </Grid.RowDefinitions>
-
-                            <TextBlock Grid.Row="0" Grid.Column="0" Text="{DynamicResource Measure}" 
-                                       Foreground="White" FontSize="10" 
-                                       VerticalAlignment="Center"/>
-                            <TextBox Grid.Row="0" Grid.Column="1" x:Name="txtMeasureKey" 
-                                     Height="24" Background="#FF1A1A1A" Foreground="White"
-                                     BorderBrush="#FF404040" BorderThickness="1"
-                                     VerticalContentAlignment="Center" Padding="5,0"
-                                     FontSize="11" Text="F9" IsReadOnly="True"
-                                     PreviewKeyDown="TxtMeasureKey_PreviewKeyDown"/>
-                            <Button Grid.Row="0" Grid.Column="2" Content="{DynamicResource Change}" 
-                                    Width="70" Height="24" Margin="5,0,0,0"
-                                    Background="#FF0078D7" Foreground="White" 
-                                    BorderThickness="0" Cursor="Hand" FontSize="9"
-                                    Click="BtnChangeMeasureKey_Click"/>
-
-                            <TextBlock Grid.Row="1" Grid.Column="0" Text="{DynamicResource Clear}" 
-                                       Foreground="White" FontSize="10" 
-                                       VerticalAlignment="Center" Margin="0,5,0,0"/>
-                            <TextBox Grid.Row="1" Grid.Column="1" x:Name="txtClearKey" 
-                                     Height="24" Background="#FF1A1A1A" Foreground="White"
-                                     BorderBrush="#FF404040" BorderThickness="1"
-                                     VerticalContentAlignment="Center" Padding="5,0"
-                                     FontSize="11" Text="F10" IsReadOnly="True" Margin="0,5,0,0"
-                                     PreviewKeyDown="TxtClearKey_PreviewKeyDown"/>
-                            <Button Grid.Row="1" Grid.Column="2" Content="{DynamicResource Change}" 
-                                    Width="70" Height="24" Margin="5,5,0,0"
-                                    Background="#FF0078D7" Foreground="White" 
-                                    BorderThickness="0" Cursor="Hand" FontSize="9"
-                                    Click="BtnChangeClearKey_Click"/>
-
-                            <TextBlock Grid.Row="2" Grid.Column="0" Text="{DynamicResource Calibration}" 
-                                       Foreground="White" FontSize="10" 
-                                       VerticalAlignment="Center" Margin="0,5,0,0"/>
-                            <TextBox Grid.Row="2" Grid.Column="1" x:Name="txtCalibrationKey" 
-                                     Height="24" Background="#FF1A1A1A" Foreground="White"
-                                     BorderBrush="#FF404040" BorderThickness="1"
-                                     VerticalContentAlignment="Center" Padding="5,0"
-                                     FontSize="11" Text="F8" IsReadOnly="True" Margin="0,5,0,0"
-                                     PreviewKeyDown="TxtCalibrationKey_PreviewKeyDown"/>
-                            <Button Grid.Row="2" Grid.Column="2" Content="{DynamicResource Change}" 
-                                    Width="70" Height="24" Margin="5,5,0,0"
-                                    Background="#FF0078D7" Foreground="White" 
-                                    BorderThickness="0" Cursor="Hand" FontSize="9"
-                                    Click="BtnChangeCalibrationKey_Click"/>
-                        </Grid>
-                    </StackPanel>
-
-                    <StackPanel Grid.Row="1" Orientation="Vertical" VerticalAlignment="Bottom">
-                        <Button x:Name="btnSaveSettings" Content="{DynamicResource SaveSettings}" 
-                                Height="26" Margin="0,8,0,5"
-                                Background="#FF00AA00" Foreground="White" 
-                                BorderThickness="0" Cursor="Hand" FontSize="10"
-                                Click="BtnSaveSettings_Click"/>
-
-                        <Button x:Name="btnChangeLanguage" Content="{DynamicResource Language}" 
-                                Height="24" Margin="0,0,0,0"
-                                Background="#FF666666" Foreground="White" 
-                                BorderThickness="0" Cursor="Hand" FontSize="10"
-                                Click="BtnChangeLanguage_Click" HorizontalAlignment="Right" Padding="10,0"/>
-                    </StackPanel>
-                </Grid>
-            </Border>
-
-            <!-- Эмблема внизу -->
-            <Image Grid.Row="4" 
-       Source="emblem.png" 
-       Width="140" Height="140" 
-       Margin="118,160,0,13"
-       HorizontalAlignment="Left"
-       Stretch="Uniform"
-       x:Name="imgEmblem" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
-=======
             <Border Grid.Row="4" Background="#FF1E1E1E" CornerRadius="5" Padding="8" Margin="0,8,0,0">
                 <StackPanel>
                     <TextBlock Text="⚙ Горячие клавиши:" 
@@ -381,7 +197,6 @@
        HorizontalAlignment="Center"
        Stretch="Uniform"
        x:Name="imgEmblem"/>
->>>>>>> 1efd22a59c9bcb11ef7fd17096784d8f7e026b6a
         </Grid>
     </Border>
 </Window>
